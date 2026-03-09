@@ -1,11 +1,29 @@
 package com.example;
+
 import static org.junit.Assert.assertEquals;
 import org.junit.Test;
 
 public class AppTest {
+
+    App calc = new App();
+
     @Test
     public void testAdd() {
-        App calc = new App();
-        assertEquals(10, calc.add(5, 5));
+        assertEquals(15, calc.add(10,5));
+    }
+
+    @Test
+    public void testSubtract() {
+        assertEquals(5, calc.subtract(10,5));
+    }
+
+    @Test
+    public void testMultiply() {
+        assertEquals(50, calc.multiply(10,5));
+    }
+
+    @Test
+    public void testDivide() {
+        assertEquals(2, calc.divide(10,5));
     }
 }
